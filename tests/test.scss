@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#dis {
+  width: 1000px;
+  height: 1000px;
+  background: rgb(60, 60, 60);
+  display: flex;
+}
+
+@import "../src/sass.scss";
