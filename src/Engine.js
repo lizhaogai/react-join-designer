@@ -227,11 +227,11 @@ module.exports = function () {
             return this.state.links[id];
         },
 
-        getLinkBySourceAndTarget: function (source, target) {
+        getExistLinkBySourceAndTarget: function (id, source, target) {
             let link = null;
             Object.keys(this.state.links).map((key) => {
                 let _link = this.state.links[key];
-                if ((_link.source === source && _link.target == target) || (_link.source === target && _link.target == source)) {
+                if (((_link.source === source && _link.target == target) || (_link.source === target && _link.target == source)) && id != _link.id) {
                     link = _link;
                 }
             });

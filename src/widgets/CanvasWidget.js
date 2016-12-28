@@ -194,8 +194,7 @@ module.exports = React.createClass({
                                         this.state.selectedLink.target = nodeElement.dataset.nodeid;
                                         this.state.selectedLink.targetPort = element.dataset.name;
 
-                                        console.log(122);
-                                        let link = this.props.engine.getLinkBySourceAndTarget(this.state.selectedLink.source, this.state.selectedLink.target);
+                                        let link = this.props.engine.getExistLinkBySourceAndTarget(this.state.selectedLink.id, this.state.selectedLink.source, this.state.selectedLink.target);
                                         if (link) {
                                             this.props.engine.removeLink(this.state.selectedLink);
                                         } else {
